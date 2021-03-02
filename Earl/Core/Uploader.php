@@ -219,4 +219,20 @@ class Uploader
 		return true;
 	}
 
+    /**
+     * this function gets the uploaded filename.
+     * 
+     * @param bool $withPath if set to ``true`` it'll return the filename with the destination path.
+     *             ``false`` by default.
+     * 
+     * @return string
+     */
+    public function getFileName($withPath = false) {
+        if($withPath) {
+            return $this->fileNameWithPath;
+        }
+
+        return $this->fileName;
+    }
+
 }
