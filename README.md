@@ -8,8 +8,8 @@ PHP Uploader Library For Everyone.
 3. Secure
 
 ## To-Dos
-1. Improve Code Quality
-2. Add Additional Features.
-3. Add Documentation
+- Improve Code Quality
+- Add Additional Features.
+- Add Documentation
 
 ## [License](https://opensource.org/licenses/MIT)
