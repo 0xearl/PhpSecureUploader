@@ -1,6 +1,6 @@
 <?php 
 
-require_once('../autoload.php');                                                    // Load your autoload.php
+require_once('../vendor/autoload.php');                                                    // Load your autoload.php
 
 use Earl\Core\Uploader;                                                             // Use the uploader
 

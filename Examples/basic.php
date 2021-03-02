@@ -1,5 +1,5 @@
 <?php 
-require_once('../autoload.php');                                    // load your autoloader.php
+require_once('../vendor/autoload.php');                                    // load your autoloader.php
 
 use Earl\Core\Uploader;
 
