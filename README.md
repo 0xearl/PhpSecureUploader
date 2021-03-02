@@ -10,6 +10,10 @@ PHP Uploader Library For Everyone.
 ## To-Dos
 - Improve Code Quality
 - Add Additional Features.
-- Add Documentation
+- Improve Documentation
+
+## Documentation
+[Basic Usage of the library](https://github.com/0xearl/PhpSecureUploader/Examples/basic.php)
+[Customizing The Validation](https://github.com/0xearl/PhpSecureUploader/Examples/customize.php)
 
 ## [License](https://opensource.org/licenses/MIT)
