@@ -1,5 +1,5 @@
 {
-    "name": "EarlSabalo/PhpSecureUpload",
+    "name": "earl-sabalo/PhpSecureUpload",
     "description": "A Secure, Customizable and Easy PHP Uploader Library For Everyone.",
     "require": {
         "php": ">=7.4"
