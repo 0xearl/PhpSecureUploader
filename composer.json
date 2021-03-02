@@ -1,7 +1,19 @@
 {
     "name": "earl-sabalo/php-secure-upload",
     "description": "A Secure, Customizable and Easy PHP Uploader Library For Everyone.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [ 
+        {
+            "name": "Earl John Sabalo",
+            "email": "earljohnsabalo@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {"Earl\\Core\\": "src/"}
+    },
     "require": {
-        "php": ">=7.4"
+        "php": "^7.4"
     }
 }
