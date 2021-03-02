@@ -13,7 +13,7 @@ PHP Uploader Library For Everyone.
 - Improve Documentation
 
 ## Documentation
-[Basic Usage of the library](https://github.com/0xearl/PhpSecureUploader/Examples/basic.php)  
-[Customizing The Validation](https://github.com/0xearl/PhpSecureUploader/Examples/customize.php)  
+[Basic Usage of the library](https://github.com/0xearl/PhpSecureUploader/blob/master/Examples/basic.php)  
+[Customizing The Validation](https://github.com/0xearl/PhpSecureUploader/blob/master/Examples/customize.php)  
 
 ## [License](https://opensource.org/licenses/MIT)
