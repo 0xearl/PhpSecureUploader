@@ -12,4 +12,4 @@ PHP Uploader Library For Everyone.
 2. Add Additional Features.
 3. Add Documentation
 
-# [License] (https://opensource.org/licenses/MIT)
+# [License](https://opensource.org/licenses/MIT)
