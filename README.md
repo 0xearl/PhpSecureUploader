@@ -2,6 +2,11 @@
 This Repository Aims To Provide A **Secure**, **Customizable** and **Easy** 
 PHP Uploader Library For Everyone.
 
+## Installation
+simply run 
+> composer require earl-sabalo/php-secure-upload
+
+
 ## Features
 1. Customizable
 2. Easy To Use
