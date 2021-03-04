@@ -9,6 +9,7 @@
             "email": "earljohnsabalo@gmail.com"
         }
     ],
+    "keywords": ["Uploader", "Secure Uploader", "PHP Uploader"],
     "minimum-stability": "dev",
     "autoload": {
         "psr-4": {"Earl\\Core\\": "src/Core/"}
