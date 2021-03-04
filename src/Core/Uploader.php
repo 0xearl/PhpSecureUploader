@@ -10,7 +10,7 @@ use Earl\Core\Exceptions\FileTooBigException;
 /**
  * @author Earl John Sabalo
  *
- * @class Uploader
+ * @package php-secure-upload
  *
  * This class provides a secure uploading library.
  */
@@ -114,15 +114,15 @@ class Uploader
 	public function processImage() {
 
 		try {
-			$validImage = $this->validateImage();			
+			$validImage = $this->validateImage();	
+            
+            if($validImage) {
+                if($this->upload()) {
+                    return true;
+                }
+            }
 		}catch(\Exception $e) {
-			return "$e->getMessage()";
-		}
-		
-		if($validImage) {
-			if($this->upload()) {
-				return true;
-			}
+			return $e->getMessage();
 		}
 
 		return false;
@@ -157,13 +157,13 @@ class Uploader
 		}
 
 		if(!in_array($this->fileExt, $this->validImageExtensions)) {
-			throw new InvalidExtensionException('Invalid File Extension.');
+			throw new InvalidExtensionException('Invalid Image Extension.');
 		}elseif(!in_array($this->file['type'], $this->validImageMimeTypes)) {
-			throw new InvalidMimeTypeException('Invalid File Mime Type.');
+			throw new InvalidMimeTypeException('Invalid Image Mime Type.');
 		}
 
 		if($this->file['size'] > $this->validImageSize) {
-			throw new FileTooBigException('File Size Too Big.');
+			throw new FileTooBigException('Image Size Too Big.');
 		}
 
 		return true;
