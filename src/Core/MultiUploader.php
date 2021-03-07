@@ -64,7 +64,7 @@ class MultiUploader extends Uploader
                 }
             }
         } catch (\Exception $e) {
-            return $e->getMessage();
+            echo $e->getMessage();
         }
 
         return false;
@@ -116,16 +116,20 @@ class MultiUploader extends Uploader
 
             if ($this->file['error'][$i] > 0) {
                 throw new FileErrorException('File seems to be corrupted. Please try again.');
+                return false;
             }
 
             if (!in_array($this->getExtension($this->file['name'][$i]), $this->validImageExtensions)) {
                 throw new InvalidExtensionException('Invalid image extension.');
+                return false;
             } elseif (!in_array($this->file['type'][$i], $this->validImageMimeTypes)) {
                 throw new InvalidMimeTypeException('Invalid image mime-type.');
+                return false;
             }
 
             if ($this->file['size'][$i] > $this->validImageSize) {
                 throw new FileTooBigException('Image size too big.');
+                return false;
             }
         }
         return true;
@@ -154,9 +158,9 @@ class MultiUploader extends Uploader
     public function getFileNames($withPath = false)
     {
         if ($withPath) {
-            return implode(',', $this->fileNames);
+            return implode(', ', $this->fileNames);
         }
-        return implode(',', $this->fileNames);
+        return implode(', ', $this->fileNames);
     }
 
     /**
@@ -166,38 +170,42 @@ class MultiUploader extends Uploader
      * 
      * @return bool
      */
-    public function validateFiles()
+    public function validateDocuments()
     {
         for ($i = 0; $i < $this->count; $i++) {
 
             if ($this->file['error'][$i] > 0) {
                 throw new FileErrorException('File seems to be corrupted. Please try again.');
+                return false;
             }
 
-            if (!in_array($this->getExtension($this->file['name'][$i]), $this->validFileExtensions)) {
+            if (!in_array($this->getExtension($this->file['name'][$i]), $this->validDocumentExtensions)) {
                 throw new InvalidExtensionException('Invalid file extension.');
-            } elseif (!in_array($this->file['type'][$i], $this->validFileMimeTypes)) {
+                return false;
+            } elseif (!in_array($this->file['type'][$i], $this->validDocumentMimeTypes)) {
                 throw new InvalidMimeTypeException('Invalid file mime-type.');
+                return false;
             }
 
-            if ($this->file['size'][$i] > $this->validFileSize) {
+            if ($this->file['size'][$i] > $this->validDocumentSize) {
                 throw new FileTooBigException('File size too big.');
+                return false;
             }
         }
         return true;
     }
 
     /**
-     * This function processes the validation and uploading of the images.
+     * This function processes the validation and uploading of the documents.
      * 
      * @throws \Exception
      * 
      * @return bool;
      */
-    public function processFiles()
+    public function processDocuments()
     {
         try {
-            $validFile = $this->validateFiles();
+            $validFile = $this->validateDocuments();
 
             if ($validFile) {
                 if ($this->multiUpload()) {
@@ -205,7 +213,9 @@ class MultiUploader extends Uploader
                 }
             }
         } catch (\Exception $e) {
-            return $e->getMessage();
+            echo $e->getMessage();
         }
+
+        return false;
     }
 }
