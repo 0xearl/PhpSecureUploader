@@ -3,12 +3,12 @@ require_once('../vendor/autoload.php');                                    // lo
 
 use Earl\Core\Uploader;
 
-$uploader = new Uploader('imageUpload', '/');                       // Set the filename and the destination of uploaded files
+$uploader = new Uploader('imageUpload', '/');                              // Set the filename and the destination of uploaded files
 
 /**
  * You can use processImage() if your file being uploaded is an 
- * image Or you can use processFile() if your file being 
- * uploaded is an document/text/pdf etc
+ * image Or you can use processDocument() if your file being 
+ * uploaded is a document/text/pdf etc
  */
 $uploader->processImage();
 
