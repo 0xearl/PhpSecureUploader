@@ -22,7 +22,7 @@ simply run
 [Basic Usage of the library](https://github.com/0xearl/PhpSecureUploader/blob/master/Examples/basic.php)  
 [Customizing The Validation](https://github.com/0xearl/PhpSecureUploader/blob/master/Examples/customize.php)  
 [Basic Usage of the multi-uploading library](https://github.com/0xearl/PhpSecureUploader/blob/master/Examples/basicMultipleUploading.php)  
-[Customizing The Validation for multi-uploading library](https://github.com/0xearl/PhpSecureUploader/blob/master/Examples/customize.php)  
+[Customizing The Validation for multi-uploading library](https://github.com/0xearl/PhpSecureUploader/blob/master/Examples/customizeMultipleUploading.php)  
 
 ## [License](https://opensource.org/licenses/MIT)
 
